@@ -35,7 +35,7 @@
 			factory.deps = deps;
 		factories[id] = factory;
 	}
-	define.amd = true;
+	define.amd = {};
 	g.define = define;
 
 	function rel(name, path) {
