@@ -1,6 +1,6 @@
 {
   "name": "hazelnut",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "hazelnut.js",
   "description": "What's smaller than an almond? This AMD shim.",
   "repository": {
