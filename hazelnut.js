@@ -4,18 +4,17 @@
 
 	function require(id) {
 		if (id.pop) id=id[0];
-		var m = modules[id],
-			e = m && m.exports;
+		var m = modules[id];
 
 		if (!m) {
-			m = { id: id, exports:e={} };
+			m = { id: id, exports:{} };
 			modules[id] = m.module = m;
-			e = m.exports = factories[id].apply(m, factories[id].deps.map(m.require=function(id) {
+			m.exports = factories[id].apply(m, factories[id].deps.map(m.require=function(id) {
 				return m[id] || require(rel(id, m.id));
-			})) || e;
+			})) || m.exports;
 		}
 
-		return e;
+		return m.exports;
 	}
 	(g.require = require).config = valueOf;
 
