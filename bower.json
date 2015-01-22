@@ -1,0 +1,29 @@
+{
+  "name": "hazelnut",
+  "version": "0.1.0",
+  "homepage": "https://github.com/developit/hazelnut",
+  "authors": [
+    "Jason Miller <jason@developit.ca>"
+  ],
+  "description": "What's smaller than an almond? This AMD shim.",
+  "main": "hazelnut.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "amd",
+    "shim",
+    "almond",
+    "tiny"
+  ],
+  "license": "BSD 3-Clause",
+  "ignore": [
+    "**/.*",
+    "**/*.min.js",
+    "bower_components",
+    "Gruntfile.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ]
+}
