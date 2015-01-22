@@ -2,6 +2,12 @@
 	var modules = {},
 		factories = {};
 
+	function makeRequireFn(relId, module) {
+		return function requireFn(id) {
+			return id==='exports' ? module.exports : (id==='module' ? module : (id==='require' ? requireFn : require(rel(id, relId))));
+		};
+	}
+
 	function require(id) {
 		if (id.pop) id=id[0];
 		var m = modules[id];
@@ -10,9 +16,8 @@
 		if (!m) {
 			m = { id: id, exports: {} };
 			modules[id] = m;
-			m.exports = factories[id].apply(m, factories[id].deps.map(function(n) {
-				return n==='exports' ? m.exports : (n==='module' ? m : require(rel(n, id)));
-			})) || m.exports;
+			var requireFn = makeRequireFn(id, m);
+			m.exports = factories[id].apply(m, factories[id].deps.map(requireFn)) || m.exports;
 		}
 
 		return m.exports;
