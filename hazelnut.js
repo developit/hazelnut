@@ -30,7 +30,7 @@
 	function define(id, deps, factory) {
 		if (id in factories) throw new Error(id + ' already defined');
 		if (!factory)
-			factory = deps;
+			(factory = deps).deps = [];
 		else
 			factory.deps = deps;
 		factories[id] = factory;
