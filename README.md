@@ -1,6 +1,8 @@
 hazelnut [![NPM Version](http://img.shields.io/npm/v/hazelnut.svg?style=flat)](https://www.npmjs.org/package/hazelnut) [![Bower Version](http://img.shields.io/bower/v/hazelnut.svg?style=flat)](http://bower.io/search/?q=hazelnut)
 ========
 
+[![Join the chat at https://gitter.im/developit/hazelnut](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/developit/hazelnut?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 > What's smaller than an almond? This AMD shim.
 >
 > ![nuts](http://upload.wikimedia.org/wikipedia/en/thumb/6/63/Common-nuts.png/640px-Common-nuts.png)
