@@ -13,7 +13,7 @@ hazelnut [![NPM Version](http://img.shields.io/npm/v/hazelnut.svg?style=flat)](h
 Why
 ---
 
-- Well, because **Hazelnut is 318 bytes gzipped.**
+- Well, because **Hazelnut is 322 bytes gzipped.**
 - Almond is bigger than it needs to be if you're just using it as a shim.
 - The name `hazelnut` was available on [npm](https://npmjs.com)
 - Now we can all compete to see who can come up with the smallest implementation _(submit a pull request)_
