@@ -1,8 +1,9 @@
-(function(g) {
+var require, define;
+(function() {
 	var modules = {},
 		factories = {};
 
-	function require(id) {
+	(require = function(id) {
 		if (id.pop) id=id[0];
 		var m = modules[id];
 
@@ -15,17 +16,15 @@
 		}
 
 		return m.exports;
-	}
-	(g.require = require).config = valueOf;
+	}).config = valueOf;
 
-	function define(id, deps, factory) {
+	(define = function(id, deps, factory) {
 		(factories[id] = (typeof(factory = factory || deps)!=='function') ? function(){return factory;} : factory).deps = deps.pop ? deps : [];
-	}
-	(g.define = define).amd = {};
+	}).amd = {};
 
 	function rel(name, path) {
 		name = name.replace(/^(?:\.\/|(\.\.\/))/, path.replace(/[^\/]+$/g,'') + '$1');
 		while ( name !== (name=name.replace(/[^\/]+\/\.\.\/?/g, '') ) );
 		return name;
 	}
-})(this);
+})();
