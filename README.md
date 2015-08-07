@@ -5,7 +5,7 @@ hazelnut [![NPM Version](http://img.shields.io/npm/v/hazelnut.svg?style=flat)](h
 
 > What's smaller than an almond? This AMD shim.
 >
-> ![nuts](http://upload.wikimedia.org/wikipedia/en/thumb/6/63/Common-nuts.png/640px-Common-nuts.png)
+> ![nuts](https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Common-bulk-nuts.jpg/607px-Common-bulk-nuts.jpg)
 
 ---
 
